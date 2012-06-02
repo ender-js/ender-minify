@@ -1,7 +1,7 @@
 {
     "name": "ender-minify"
   , "description": "Interface to UglifyJS Closure Compiler and YUICompressor"
-  , "version": "0.0.0"
+  , "version": "0.0.1"
   , "authors": [
         "Rod Vagg @rvagg <rod@vagg.org> (https://github.com/rvagg)"
     ]

@@ -46,6 +46,10 @@ buster.testCase('Main', {
       assert.equals(main.minifiers, [ 'uglify', 'closure' ])
     }
 
+  , 'test closure levels': function () {
+      assert.equals(main.closureLevels, [ 'whitespace', 'simple', 'advanced' ])
+    }
+
   , 'test uglify': function (done) {
       runTest('uglify', done)
     }
