@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/ender-js/ender-minify.png)](http://travis-ci.org/ender-js/ender-minify)
 # ender-minify
 
 Bundled minifier utilities for Node, designed primarily for use with the Ender CLI.
