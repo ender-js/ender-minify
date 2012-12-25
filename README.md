@@ -53,11 +53,7 @@ fs.readFile('source.js', 'utf-8', function (err, source) {
 
 ### enderMinify.minifiers
 
-Exposes the minfiers for direct external use. The object contains a `'uglify'` key and a `'closure'` key. These functions may be called directly without the `'minifier'` first-arg:
-
-```js
-enderMinify.minifiers.uglify(source, options, callback)
-```
+A list of minifiers available as an array.
 
 -----------------------------
 
