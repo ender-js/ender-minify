@@ -17,7 +17,7 @@
         "lib"         : "./lib"
     }
   , "devDependencies": {
-        "buster"      : "~0.5.4"
+        "buster"      : "~0.6.12"
       , "rimraf"      : "~2.0.1"
     }
   , "scripts": {
