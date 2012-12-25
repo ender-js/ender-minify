@@ -36,7 +36,7 @@ buster.testCase('Closure', {
       var original = 'function foobar () { var biglongvar = \'str\'; return biglongvar + \'str\'; }\n\n'
         , expected = 'function foobar(){return"strstr"};\n'
 
-      closure.minify(original, {}, function (err, actual) {
+      closure(original, {}, function (err, actual) {
         refute(err)
         assert.equals(actual, expected)
         done()
@@ -44,7 +44,7 @@ buster.testCase('Closure', {
     }
 
   , 'test minification syntax error': function (done) {
-      closure.minify('this is not javascript!', {}, function (err, output) {
+      closure('this is not javascript!', {}, function (err, output) {
         refute(output)
         assert(err)
         assert(err instanceof Error)
@@ -67,7 +67,7 @@ buster.testCase('Closure', {
          , expected =
               '/*\n* this is a copyright block\n* this is another copyright block*/\n!function(){return"strstr"}();!function(){return"strstr"}();\n'
 
-      closure.minify(original, {}, function (err, actual) {
+      closure(original, {}, function (err, actual) {
         refute(err)
         assert.equals(actual, expected)
         done()

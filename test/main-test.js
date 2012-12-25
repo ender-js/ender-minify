@@ -22,19 +22,18 @@
  * SOFTWARE.
  */
 
+var buster     = require('buster')
+  , assert     = buster.assert
+  , main       = require('../lib/main')
 
-var buster      = require('buster')
-  , assert      = buster.assert
-  , main        = require('../lib/main')
-
-  , testSource  = '(function foo (bar) { alert("b" + "a" + "n" + "g"); });'
-  , expected    = {
+  , testSource = '(function foo (bar) { alert("b" + "a" + "n" + "g"); });'
+  , expected   = {
                       uglify  : '(function(t){alert("bang")})'
                     , closure : '(function(){alert("bang")});'
                   }
 
-  , runTest           = function (minifier, done) {
-      main.minify(minifier, testSource, {}, function (err, actual) {
+  , runTest    = function (minifier, done) {
+      main(minifier, testSource, {}, function (err, actual) {
         refute(err)
         assert.match(actual, expected[minifier])
         done()

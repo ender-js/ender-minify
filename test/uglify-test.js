@@ -32,7 +32,7 @@ buster.testCase('Uglify', {
       var original = 'function foobar () { var biglongvar = \'str\'; return biglongvar + \'str\'; }\n\n'
         , expected = /^function foobar\(\)\{var ([a-z])="str";return \1\+"str"\}$/
 
-      uglify.minify(original, {}, function (err, actual) {
+      uglify(original, {}, function (err, actual) {
         refute(err)
         assert.match(actual, expected)
         done()
@@ -40,7 +40,7 @@ buster.testCase('Uglify', {
     }
 
   , 'test minification syntax error': function (done) {
-      uglify.minify('this is not javascript!', {}, function (err, output) {
+      uglify('this is not javascript!', {}, function (err, output) {
         refute(output)
         assert(err)
         assert(err instanceof Error)
@@ -63,7 +63,7 @@ buster.testCase('Uglify', {
          , expected =
               /^\/\*!\n \* this is a copyright block\n \*\/\n;?!function\(\)\{var ([a-z])="str";return \1\+"str"\}\(\),\n\/\*!\n \* this is another copyright block\n \*\/\n!function\(\)\{var ([a-z])="str";return \2\+"str"\}\(\)$/
 
-      uglify.minify(original, {}, function (err, actual) {
+      uglify(original, {}, function (err, actual) {
         refute(err)
         assert.match(actual, expected)
         done()

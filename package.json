@@ -1,13 +1,15 @@
 {
     "name": "ender-minify"
   , "description": "Interface to UglifyJS Closure Compiler and YUICompressor"
-  , "version": "0.0.4"
+  , "version": "0.1.0"
   , "authors": [
         "Rod Vagg @rvagg <rod@vagg.org> (https://github.com/rvagg)"
+      , "Dustin Diaz @ded <dustin@obvious.com> (https://github.com/ded)"
+      , "Jacob Thornton @fat <jacob@twitter.com> (https://github.com/fat)"
     ]
   , "keywords": [ "minify", "uglify", "yuicompressor", "closure" ]
   , "main": "./lib/main.js"
-  , "homepage": "https://ender.no.de"
+  , "homepage": "https://ender.jit.su"
   , "dependencies": {
         "uglify-js"   : "~1.3.0"
     }
@@ -17,11 +19,9 @@
   , "devDependencies": {
         "buster"      : "~0.5.4"
       , "rimraf"      : "~2.0.1"
-      , "jshint"      : "~0.7.1"
-      , "colors"      : "~0.6.0"
     }
   , "scripts": {
-        "test"        : "make tests"
+        "test"        : "./node_modules/.bin/buster-test"
     }
   , "repository": {
         "type"        : "git"
