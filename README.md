@@ -4,7 +4,7 @@ Bundled minifier utilities for Node, designed primarily for use with the [Ender 
 
 ## About Ender
 
-For more information checkout [http://ender.jit.su](http://ender.jit.su)
+For more information check out [http://ender.jit.su](http://ender.jit.su)
 
 ## API
 
