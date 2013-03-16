@@ -22,9 +22,10 @@
  * SOFTWARE.
  */
 
-var buster     = require('buster')
-  , assert     = buster.assert
-  , main       = require('../lib/main')
+var buster = require('bustermove')
+  , assert = require('referee').assert
+  , refute = require('referee').refute
+  , main   = require('../lib/main')
 
   , testSource = '(function foo (bar) { alert("b" + "a" + "n" + "g"); });'
   , expected   = {
